@@ -33,7 +33,7 @@
   </script>
   <style>
     body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; }
-    .navbar { background: #0A1628 !important; position: sticky !important; top: 0; z-index: 1000; }
+    /* Navbar default from styles.css */
     .search-bar:focus { outline: none; border-color: #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
     .blog-card { transition: all 0.3s ease; border: 1px solid transparent; display: flex; flex-direction: column; }
     .blog-card:hover { border-color: #f1f5f9; transform: translateY(-5px); }
@@ -63,13 +63,15 @@
     </div>
   </nav>
 
-  <!-- SEARCH AREA -->
-  <div class="py-10">
-    <div class="container mx-auto px-6 max-w-7xl">
+  <!-- BLOG HEADER -->
+  <div class="bg-ct-dark pt-32 pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,168,67,0.1),transparent)] pointer-events-none"></div>
+    <div class="container mx-auto px-6 max-w-7xl relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-black text-white mb-8">Pusat <span class="text-ct-accent">Edukasi</span> Material</h1>
       <div class="flex justify-center">
         <div class="relative w-full max-w-xl">
-          <input type="text" placeholder="Cari artikel..." class="search-bar w-full py-3 px-6 pl-12 rounded-full border border-slate-200 text-sm bg-white transition-all">
-          <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-slate-300"></i>
+          <input type="text" placeholder="Cari artikel..." class="search-bar w-full py-4 px-8 pl-14 rounded-2xl border-none text-sm bg-white/10 text-white placeholder:text-slate-400 backdrop-blur-md transition-all focus:bg-white focus:text-ct-navy">
+          <i class="fas fa-search absolute left-6 top-1/2 -translate-y-1/2 text-ct-accent"></i>
         </div>
       </div>
     </div>
@@ -380,11 +382,12 @@
       <span>Produk</span>
     </a>
     <a href="blog.html" class="mobile-nav-item active">
-      <i class="fas fa-images"></i>
+      <i class="fas fa-blog"></i>
       <span>Blog</span>
     </a>
   </nav>
 
+  <script src="script.js"></script>
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });

@@ -53,10 +53,44 @@ h1,h2,h3,h4,h5,h6 { font-weight:700; line-height:1.2; }
   background:transparent;
 }
 .navbar.scrolled {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(-20px);
+  background: var(--white);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  height: 70px;
+}
+@media (max-width: 768px) {
+  .navbar.scrolled {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  .navbar .nav-links, 
+  .navbar .nav-cta, 
+  .navbar .hamburger {
+    display: none !important;
+  }
+  .navbar .nav-container {
+    justify-content: center; /* Center the logo on mobile */
+  }
+}
+.navbar.scrolled .nav-links a {
+  color: var(--primary-dark);
+}
+.navbar.scrolled .nav-links a:hover, 
+.navbar.scrolled .nav-links a.active {
+  color: var(--accent);
+}
+.navbar.scrolled .hamburger span {
+  background: var(--primary-dark);
+}
+.navbar.scrolled .nav-logo img {
+  filter: brightness(0.2) invert(0) sepia(1) hue-rotate(200deg) saturate(0); /* Make logo text dark if needed, or just let it be if it's colored */
+  filter: none; /* Keep original colored logo but add contrast */
+}
+/* More specific contrast for logo text if it's white in the image */
+.navbar.scrolled .nav-logo {
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.1));
 }
 .nav-container {
   display:flex; align-items:center; justify-content:space-between;

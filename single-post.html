@@ -34,8 +34,7 @@
     }
   </script>
   <style>
-    <<<<<<< HEAD html,
-    body {
+    html, body {
       height: 100%;
     }
 
@@ -46,16 +45,8 @@
       flex-direction: column;
     }
 
-    =======body {
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-    }
-
-    >>>>>>>c7a06f7a59222aaefca70d55d4bb5c4fe5fa89b6 .navbar {
-      background: #0A1628 !important;
-      position: sticky !important;
-      top: 0;
-      z-index: 1000;
+    .navbar {
+      /* Handled by styles.css and script.js */
     }
 
     .content-area p {
@@ -77,7 +68,7 @@
       top: 100px;
     }
 
-    <<<<<<< HEAD main {
+    main {
       flex: 1 0 auto;
     }
 
@@ -85,8 +76,6 @@
       flex-shrink: 0;
       background: #0A1628;
     }
-
-    =======>>>>>>>c7a06f7a59222aaefca70d55d4bb5c4fe5fa89b6
   </style>
 </head>
 
@@ -109,19 +98,17 @@
     </div>
   </nav>
 
-  <<<<<<< HEAD <div class="flex-grow flex flex-col">
+  <div class="flex-grow flex flex-col">
 
-    =======
-    >>>>>>> c7a06f7a59222aaefca70d55d4bb5c4fe5fa89b6
-    <!-- BREADCRUMB -->
-    <div class="bg-slate-50 py-4 border-b border-slate-100">
+    <!-- BREADCRUMB & HEADER -->
+    <div class="bg-ct-dark pt-32 pb-12 border-b border-white/5">
       <div class="container mx-auto px-6 max-w-7xl">
-        <div class="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+        <div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">
           <a href="index.html" class="hover:text-ct-accent transition-colors">Beranda</a>
           <i class="fas fa-chevron-right text-[8px]"></i>
           <a href="blog.html" class="hover:text-ct-accent transition-colors">Blog</a>
           <i class="fas fa-chevron-right text-[8px]"></i>
-          <span class="text-ct-navy" id="breadcrumb-title">Detail Artikel</span>
+          <span class="text-ct-accent" id="breadcrumb-title">Detail Artikel</span>
         </div>
       </div>
     </div>
@@ -205,107 +192,127 @@
 
       </div>
     </div>
-    <<<<<<< HEAD </div>
+  </div>
 
-      <!-- FOOTER -->
-      <footer class="footer">
-        =======
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container mx-auto px-6 max-w-7xl">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img
+            src="https://chelatama.com/wp-content/uploads/2025/07/cropped-logo-chela-tama-shadow-e1752827290147.png"
+            alt="Chelatamabojongsari">
+          <p>Toko kaca, aluminium, ACP, dan aksesoris terlengkap di Bojongsari. Terpercaya sejak 1999.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Chelatamabojongsari. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-        <!-- FOOTER -->
-        <footer class="footer mt-24">
-          >>>>>>> c7a06f7a59222aaefca70d55d4bb5c4fe5fa89b6
-          <div class="container mx-auto px-6 max-w-7xl">
-            <div class="footer-grid">
-              <div class="footer-brand">
-                <img
-                  src="https://chelatama.com/wp-content/uploads/2025/07/cropped-logo-chela-tama-shadow-e1752827290147.png"
-                  alt="Chelatamabojongsari">
-                <p>Toko kaca, aluminium, ACP, dan aksesoris terlengkap di Bojongsari. Terpercaya sejak 1999.</p>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <p>&copy; 2026 Chelatamabojongsari. All Rights Reserved.</p>
-            </div>
-          </div>
-        </footer>
+  <!-- MOBILE TAB BAR -->
+  <nav class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item">
+      <i class="fas fa-home"></i>
+      <span>Beranda</span>
+    </a>
+    <a href="index.html#keunggulan" class="mobile-nav-item">
+      <i class="fas fa-th-large"></i>
+      <span>Keunggulan</span>
+    </a>
+    <a href="https://wa.me/6287780845042" class="mobile-nav-item nav-center">
+      <i class="fab fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="produk.html" class="mobile-nav-item">
+      <i class="fas fa-box-open"></i>
+      <span>Produk</span>
+    </a>
+    <a href="blog.html" class="mobile-nav-item active">
+      <i class="fas fa-blog"></i>
+      <span>Blog</span>
+    </a>
+  </nav>
 
-        <script>
-          // Embedded data for local/offline compatibility
-          const blogData = [
-            {
-              "id": "1",
-              "category": "Panduan",
-              "title": "Pusat Kaca & Aluminium Bojongsari Terlengkap Sejak 1999",
-              "author": "Admin",
-              "date": "20 Apr 2026",
-              "image": "assets/img/blog-store.png",
-              "content": "<p>Memilih material bangunan seperti kaca dan aluminium bukanlah hal yang bisa dianggap sepele. Kualitas material akan menentukan ketahanan bangunan Anda dalam jangka panjang, terutama untuk penggunaan eksterior yang terpapar cuaca panas dan hujan.</p><p>Di wilayah Bojongsari, Depok, kebutuhan akan material berkualitas tinggi terus meningkat seiring dengan berkembangnya hunian modern. Chelatamabojongsari, sebagai pusat distribusi material sejak 1999, memahami betul standar apa yang dibutuhkan untuk menciptakan bangunan yang kokoh dan estetik.</p><h2>1. Memilih Ketebalan Kaca yang Tepat</h2><p>Banyak pemilik rumah yang hanya fokus pada harga tanpa memperhatikan faktor keamanan. Untuk partisi ruangan, kaca polos 5mm mungkin cukup, namun untuk area kamar mandi atau balkon, penggunaan <strong>Kaca Tempered</strong> minimal 8mm adalah wajib hukumnya demi keamanan keluarga.</p><p>Kaca tempered memiliki kekuatan 4-5 kali lipat dibanding kaca biasa. Selain itu, jika terjadi pecah, kaca ini akan berubah menjadi butiran tumpul yang tidak berbahaya.</p><h2>2. Kualitas Kusen Aluminium</h2><p>Aluminium menjadi primadona karena tahan karat dan rayap. Namun, pastikan Anda memilih profil aluminium dengan ketebalan yang pas (minimal 1mm) agar tidak mudah penyok saat pemasangan aksesoris seperti handle atau engsel berat.</p><blockquote class='my-10 p-8 bg-slate-50 border-l-4 border-ct-accent rounded-r-3xl italic text-ct-navy'>'Kekuatan bangunan tidak hanya terletak pada struktur utama, tapi juga pada detail material pengisinya seperti kaca dan aluminium.'</blockquote><p>Informasi lebih lanjut mengenai ketersediaan stok dan jasa pasang dapat Anda tanyakan langsung kepada tim teknis kami melalui tombol konsultasi di bawah ini.</p>"
-            },
-            {
-              "id": "2",
-              "category": "Tips",
-              "title": "Cara Memilih Profil Aluminium Berkualitas untuk Rumah",
-              "author": "Admin",
-              "date": "18 Apr 2026",
-              "image": "assets/img/blog-hinge.png",
-              "content": "<p>Profil aluminium adalah tulang punggung dari jendela dan pintu rumah modern. Memilih profil yang salah bisa menyebabkan pintu melengkung atau kaca yang bergetar saat tertiup angin.</p><h2>Pentingnya Ketebalan Penampang</h2><p>Pastikan Anda menanyakan ketebalan profil (thickness) sebelum membeli. Untuk pintu geser besar, disarankan menggunakan ketebalan minimal 1.2mm agar mampu menopang beban kaca yang berat.</p><h2>Finishing yang Tahan Cuaca</h2><p>Gunakan finishing Powder Coating untuk warna yang lebih awet dan tahan gores dibandingkan cat semprot biasa. Ini sangat krusial untuk rumah-rumah di daerah tropis seperti Indonesia.</p>"
-            },
-            {
-              "id": "3",
-              "category": "Tren",
-              "title": "Tren Curtain Wall 2026: Desain Fasad Kaca Modern",
-              "author": "Admin",
-              "date": "15 Apr 2026",
-              "image": "assets/img/blog-shower.png",
-              "content": "<p>Fasad kaca atau curtain wall memberikan tampilan futuristik pada gedung perkantoran maupun ruko. Di tahun 2026, tren mengarah pada minimalis frameless yang memberikan pandangan luas tanpa terganggu sekat tebal.</p><h2>Efisiensi Energi dengan Kaca Low-E</h2><p>Kaca Low-Emissivity (Low-E) menjadi standar baru dalam desain fasad. Kaca ini mampu memantulkan panas matahari namun tetap membiarkan cahaya masuk, sehingga menghemat biaya penggunaan AC.</p>"
-            },
-            {
-              "id": "4",
-              "category": "Perawatan",
-              "title": "Panduan Merawat Jendela Aluminium Agar Tetap Kinclong",
-              "author": "Admin",
-              "date": "12 Apr 2026",
-              "image": "assets/img/blog-hinge.png",
-              "content": "<p>Meskipun aluminium tahan karat, debu dan polusi bisa membuat permukaannya kusam seiring waktu. Berikut adalah tips sederhana untuk merawat jendela aluminium Anda.</p><h2>Gunakan Cairan Pembersih yang Lembut</h2><p>Hindari pembersih berbahan kimia keras yang bisa merusak lapisan coating. Cukup gunakan campuran sabun cuci piring ringan dan air hangat untuk mengusap kotoran.</p><h2>Pelumas untuk Engsel dan Roda</h2><p>Lakukan pelumasan rutin pada bagian engsel dan rel pintu sliding minimal 6 bulan sekali agar pergerakan tetap lancar dan tidak mengeluarkan suara berdecit.</p>"
-            },
-            {
-              "id": "5",
-              "category": "Inspirasi",
-              "title": "Pintu Sliding Kaca: Solusi Ruang Sempit Jadi Terlihat Luas",
-              "author": "Admin",
-              "date": "10 Apr 2026",
-              "image": "assets/img/blog-kaca.png",
-              "content": "<p>Pintu sliding atau geser adalah solusi cerdas untuk hunian dengan keterbatasan ruang. Dengan menggunakan material kaca, batasan antara indoor dan outdoor menjadi samar, menciptakan efek visual ruangan yang jauh lebih lapang.</p><h2>Pilihan Kaca Polos atau Buram</h2><p>Untuk area privat seperti balkon kamar, Anda bisa menggunakan kaca buram (frosted glass) atau kaca dengan stiker sandblast untuk menjaga privasi tanpa mengurangi estetika modern.</p>"
-            },
-            {
-              "id": "6",
-              "category": "Edukasi",
-              "title": "Powder Coating vs Anodized: Mana Finishing Aluminium Terbaik?",
-              "author": "Admin",
-              "date": "08 Apr 2026",
-              "image": "assets/img/blog-silicone.png",
-              "content": "<p>Banyak konsumen bingung memilih antara Powder Coating dan Anodized. Keduanya adalah proses pewarnaan aluminium yang berbeda secara teknis.</p><h2>Keunggulan Powder Coating</h2><p>Powder coating menawarkan variasi warna yang tak terbatas (seperti warna urat kayu) dan tekstur yang lebih tebal. Sangat cocok untuk dekorasi interior.</p><h2>Keunggulan Anodized</h2><p>Anodized mempertahankan tekstur asli metalik dari aluminium. Proses ini membuat warna menyatu dengan pori-pori logam, sehingga sangat tahan terhadap pengelupasan.</p>"
-            }
-          ];
+  <script src="script.js"></script>
+  <script>
+    // Embedded data for local/offline compatibility
+    const blogData = [
+      {
+        "id": "1",
+        "category": "Panduan",
+        "title": "Pusat Kaca & Aluminium Bojongsari Terlengkap Sejak 1999",
+        "author": "Admin",
+        "date": "20 Apr 2026",
+        "image": "assets/img/blog-store.png",
+        "content": "<p>Memilih material bangunan seperti kaca dan aluminium bukanlah hal yang bisa dianggap sepele. Kualitas material akan menentukan ketahanan bangunan Anda dalam jangka panjang, terutama untuk penggunaan eksterior yang terpapar cuaca panas dan hujan.</p><p>Di wilayah Bojongsari, Depok, kebutuhan akan material berkualitas tinggi terus meningkat seiring dengan berkembangnya hunian modern. Chelatamabojongsari, sebagai pusat distribusi material sejak 1999, memahami betul standar apa yang dibutuhkan untuk menciptakan bangunan yang kokoh dan estetik.</p><h2>1. Memilih Ketebalan Kaca yang Tepat</h2><p>Banyak pemilik rumah yang hanya fokus pada harga tanpa memperhatikan faktor keamanan. Untuk partisi ruangan, kaca polos 5mm mungkin cukup, namun untuk area kamar mandi atau balkon, penggunaan <strong>Kaca Tempered</strong> minimal 8mm adalah wajib hukumnya demi keamanan keluarga.</p><p>Kaca tempered memiliki kekuatan 4-5 kali lipat dibanding kaca biasa. Selain itu, jika terjadi pecah, kaca ini akan berubah menjadi butiran tumpul yang tidak berbahaya.</p><h2>2. Kualitas Kusen Aluminium</h2><p>Aluminium menjadi primadona karena tahan karat dan rayap. Namun, pastikan Anda memilih profil aluminium dengan ketebalan yang pas (minimal 1mm) agar tidak mudah penyok saat pemasangan aksesoris seperti handle atau engsel berat.</p><blockquote class='my-10 p-8 bg-slate-50 border-l-4 border-ct-accent rounded-r-3xl italic text-ct-navy'>'Kekuatan bangunan tidak hanya terletak pada struktur utama, tapi juga pada detail material pengisinya seperti kaca dan aluminium.'</blockquote><p>Informasi lebih lanjut mengenai ketersediaan stok dan jasa pasang dapat Anda tanyakan langsung kepada tim teknis kami melalui tombol konsultasi di bawah ini.</p>"
+      },
+      {
+        "id": "2",
+        "category": "Tips",
+        "title": "Cara Memilih Profil Aluminium Berkualitas untuk Rumah",
+        "author": "Admin",
+        "date": "18 Apr 2026",
+        "image": "assets/img/blog-hinge.png",
+        "content": "<p>Profil aluminium adalah tulang punggung dari jendela dan pintu rumah modern. Memilih profil yang salah bisa menyebabkan pintu melengkung atau kaca yang bergetar saat tertiup angin.</p><h2>Pentingnya Ketebalan Penampang</h2><p>Pastikan Anda menanyakan ketebalan profil (thickness) sebelum membeli. Untuk pintu geser besar, disarankan menggunakan ketebalan minimal 1.2mm agar mampu menopang beban kaca yang berat.</p><h2>Finishing yang Tahan Cuaca</h2><p>Gunakan finishing Powder Coating untuk warna yang lebih awet dan tahan gores dibandingkan cat semprot biasa. Ini sangat krusial untuk rumah-rumah di daerah tropis seperti Indonesia.</p>"
+      },
+      {
+        "id": "3",
+        "category": "Tren",
+        "title": "Tren Curtain Wall 2026: Desain Fasad Kaca Modern",
+        "author": "Admin",
+        "date": "15 Apr 2026",
+        "image": "assets/img/blog-shower.png",
+        "content": "<p>Fasad kaca atau curtain wall memberikan tampilan futuristik pada gedung perkantoran maupun ruko. Di tahun 2026, tren mengarah pada minimalis frameless yang memberikan pandangan luas tanpa terganggu sekat tebal.</p><h2>Efisiensi Energi dengan Kaca Low-E</h2><p>Kaca Low-Emissivity (Low-E) menjadi standar baru dalam desain fasad. Kaca ini mampu memantulkan panas matahari namun tetap membiarkan cahaya masuk, sehingga menghemat biaya penggunaan AC.</p>"
+      },
+      {
+        "id": "4",
+        "category": "Perawatan",
+        "title": "Panduan Merawat Jendela Aluminium Agar Tetap Kinclong",
+        "author": "Admin",
+        "date": "12 Apr 2026",
+        "image": "assets/img/blog-hinge.png",
+        "content": "<p>Meskipun aluminium tahan karat, debu dan polusi bisa membuat permukaannya kusam seiring waktu. Berikut adalah tips sederhana untuk merawat jendela aluminium Anda.</p><h2>Gunakan Cairan Pembersih yang Lembut</h2><p>Hindari pembersih berbahan kimia keras yang bisa merusak lapisan coating. Cukup gunakan campuran sabun cuci piring ringan dan air hangat untuk mengusap kotoran.</p><h2>Pelumas untuk Engsel dan Roda</h2><p>Lakukan pelumasan rutin pada bagian engsel dan rel pintu sliding minimal 6 bulan sekali agar pergerakan tetap lancar dan tidak mengeluarkan suara berdecit.</p>"
+      },
+      {
+        "id": "5",
+        "category": "Inspirasi",
+        "title": "Pintu Sliding Kaca: Solusi Ruang Sempit Jadi Terlihat Luas",
+        "author": "Admin",
+        "date": "10 Apr 2026",
+        "image": "assets/img/blog-kaca.png",
+        "content": "<p>Pintu sliding atau geser adalah solusi cerdas untuk hunian dengan keterbatasan ruang. Dengan menggunakan material kaca, batasan antara indoor dan outdoor menjadi samar, menciptakan efek visual ruangan yang jauh lebih lapang.</p><h2>Pilihan Kaca Polos atau Buram</h2><p>Untuk area privat seperti balkon kamar, Anda bisa menggunakan kaca buram (frosted glass) atau kaca dengan stiker sandblast untuk menjaga privasi tanpa mengurangi estetika modern.</p>"
+      },
+      {
+        "id": "6",
+        "category": "Edukasi",
+        "title": "Powder Coating vs Anodized: Mana Finishing Aluminium Terbaik?",
+        "author": "Admin",
+        "date": "08 Apr 2026",
+        "image": "assets/img/blog-silicone.png",
+        "content": "<p>Banyak konsumen bingung memilih antara Powder Coating dan Anodized. Keduanya adalah proses pewarnaan aluminium yang berbeda secara teknis.</p><h2>Keunggulan Powder Coating</h2><p>Powder coating menawarkan variasi warna yang tak terbatas (seperti warna urat kayu) dan tekstur yang lebih tebal. Sangat cocok untuk dekorasi interior.</p><h2>Keunggulan Anodized</h2><p>Anodized mempertahankan tekstur asli metalik dari aluminium. Proses ini membuat warna menyatu dengan pori-pori logam, sehingga sangat tahan terhadap pengelupasan.</p>"
+      }
+    ];
 
-          function loadPost() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const postId = urlParams.get('id') || '1';
+    function loadPost() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const postId = urlParams.get('id') || '1';
 
-            const post = blogData.find(p => p.id === postId);
+      const post = blogData.find(p => p.id === postId);
 
-            if (post) {
-              document.title = `${post.title} - Chelatamabojongsari`;
-              document.getElementById('breadcrumb-title').innerText = post.title;
-              document.getElementById('post-category').innerText = post.category;
-              document.getElementById('post-title').innerText = post.title;
-              document.getElementById('post-author').innerText = post.author;
-              document.getElementById('post-date').innerText = post.date;
-              document.getElementById('post-image').src = post.image;
-              document.getElementById('post-content').innerHTML = post.content;
+      if (post) {
+        document.title = `${post.title} - Chelatamabojongsari`;
+        document.getElementById('breadcrumb-title').innerText = post.title;
+        document.getElementById('post-category').innerText = post.category;
+        document.getElementById('post-title').innerText = post.title;
+        document.getElementById('post-author').innerText = post.author;
+        document.getElementById('post-date').innerText = post.date;
+        document.getElementById('post-image').src = post.image;
+        document.getElementById('post-content').innerHTML = post.content;
 
-              const related = blogData.filter(p => p.id !== postId).slice(0, 3);
-              document.getElementById('related-posts').innerHTML = related.map(p => `
+        const related = blogData.filter(p => p.id !== postId).slice(0, 3);
+        document.getElementById('related-posts').innerHTML = related.map(p => `
           <a href="single-post.html?id=${p.id}" class="flex gap-4 group">
             <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-slate-100">
               <img src="${p.image}" alt="Thumb" class="w-full h-full object-cover">
@@ -317,13 +324,13 @@
           </a>
         `).join('');
 
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else {
-              document.getElementById('post-title').innerText = "Artikel Tidak Ditemukan";
-            }
-          }
-          document.addEventListener('DOMContentLoaded', loadPost);
-        </script>
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        document.getElementById('post-title').innerText = "Artikel Tidak Ditemukan";
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadPost);
+  </script>
 </body>
 
 </html>
