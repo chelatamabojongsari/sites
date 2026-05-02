@@ -1,0 +1,21 @@
+{
+  "title": "Membangun Kepercayaan Melalui Kualitas Sejak 1999",
+  "description": "Chelatama Bojongsari adalah toko penyedia kaca, aluminium, ACP, dan aksesoris terlengkap dengan pengalaman lebih dari 27 tahun. Kami melayani penjualan grosir dan eceran untuk memenuhi segala kebutuhan material bangunan Anda.",
+  "features": [
+    {
+      "title": "Harga Kompetitif",
+      "description": "Harga bersaing untuk pembelian satuan maupun grosir.",
+      "icon": "fas fa-tags"
+    },
+    {
+      "title": "Stok Terlengkap",
+      "description": "Tersedia berbagai jenis dan ukuran material siap kirim.",
+      "icon": "fas fa-boxes-stacked"
+    },
+    {
+      "title": "Layanan Antar",
+      "description": "Pengiriman cepat ke lokasi proyek atau alamat Anda.",
+      "icon": "fas fa-truck-fast"
+    }
+  ]
+}
