@@ -352,8 +352,8 @@ h1,h2,h3,h4,h5,h6 { font-weight:700; line-height:1.2; }
 .footer-col ul a { color:var(--text-muted); font-size:0.9rem; transition:var(--transition); display:flex; align-items:center; gap:8px; }
 .footer-col ul a:hover { color:var(--accent); }
 .footer-bottom {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:24px 0; border-top:1px solid var(--border);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px;
+  padding:32px 0; border-top:1px solid var(--border); text-align:center;
 }
 .footer-bottom p { color:var(--text-muted); font-size:0.85rem; }
 .footer-socials { display:flex; gap:12px; }
