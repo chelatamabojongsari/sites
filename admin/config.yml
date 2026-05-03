@@ -1,93 +1,56 @@
+local_backend: true
 backend:
   name: git-gateway
   branch: main
-
-local_backend: true
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
 
 collections:
-  - name: "settings"
-    label: "Site Settings"
-    delete: false
-    editor:
-      preview: false
-    files:
-      - name: "general"
-        label: "General Settings"
-        file: "data/settings.json"
-        fields:
-          - { label: "Site Title", name: "title", widget: "string" }
-          - { label: "Site Description", name: "description", widget: "text" }
-          - { label: "Contact Phone", name: "phone", widget: "string" }
-          - { label: "Contact Email", name: "email", widget: "string" }
-          - { label: "WhatsApp Number", name: "whatsapp", widget: "string" }
-
   - name: "home"
-    label: "Home Page"
-    delete: false
-    editor:
-      preview: false
+    label: "Home"
     files:
       - name: "hero"
         label: "Hero Section"
         file: "data/home/hero.json"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Highlight Text", name: "highlight", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Primary CTA Text", name: "cta_primary_text", widget: "string" }
-          - { label: "Primary CTA Link", name: "cta_primary_link", widget: "string" }
-
-      - name: "about"
-        label: "About Section"
-        file: "data/home/about.json"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "markdown" }
-          - name: "features"
-            label: "Features"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Icon Class", name: "icon", widget: "string" }
-
-  - name: "products"
-    label: "Products"
-    folder: "data/products"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Icon Class", name: "icon", widget: "string" }
-      - { label: "WhatsApp Message", name: "wa_message", widget: "string" }
-
-  - name: "portfolio"
-    label: "Portfolio"
-    folder: "data/portfolio"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Category", name: "category", widget: "select", options: ["komersial", "residensial"] }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+          - { label: "Judul", name: "judul", widget: "string" }
+          - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+          - { label: "Hero Background", name: "hero_background", widget: "image" }
+          - { label: "Hero Foreground", name: "hero_foreground", widget: "image" }
 
   - name: "blog"
-    label: "Blog Articles"
+    label: "Blog"
     folder: "data/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Category", name: "category", widget: "select", options: ["kaca", "hardware", "tips"] }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "select", options: ["Admin", "Tim Teknis"] }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "featured_image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Author", name: "author", widget: "select", options: ["Admin", "Chela Tama", "Tim Teknis"], default: "Admin" }
-      - { label: "Read Time", name: "read_time", widget: "string", default: "5 Menit Baca" }
 
+  - name: "products"
+    label: "Produk"
+    folder: "data/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama", name: "nama", widget: "string" }
+      - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+      - { label: "Gambar", name: "gambar", widget: "image" }
+
+  - name: "settings"
+    label: "Pengaturan Web"
+    files:
+      - name: "social"
+        label: "Social Media"
+        file: "data/settings.json"
+        fields:
+          - name: "social_media"
+            label: "Social Media List"
+            widget: "list"
+            fields:
+              - { label: "Platform", name: "platform", widget: "select", options: ["facebook", "instagram", "tiktok", "whatsapp"] }
+              - { label: "URL", name: "url", widget: "string" }

@@ -92,4 +92,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // === CMS DATA BINDING ===
+  const loadCMSData = async () => {
+    try {
+      // 1. Hero Data
+      const heroRes = await fetch('data/home/hero.json');
+      if (heroRes.ok) {
+        const heroData = await heroRes.json();
+        const heroSection = document.querySelector('.hero');
+        const heroTitle = document.querySelector('.hero-content h1');
+        const heroDesc = document.querySelector('.hero-desc');
+        const heroVisualPlaceholder = document.querySelector('.hero-image-wrapper > div:first-child');
+
+        if (heroTitle && heroData.judul) heroTitle.innerHTML = heroData.judul;
+        if (heroDesc && heroData.deskripsi) heroDesc.textContent = heroData.deskripsi;
+        
+        if (heroSection && heroData.hero_background) {
+          heroSection.style.backgroundImage = `url('${heroData.hero_background}')`;
+          heroSection.style.backgroundSize = 'cover';
+          heroSection.style.backgroundPosition = 'center';
+        }
+        
+        if (heroVisualPlaceholder && heroData.hero_foreground) {
+          heroVisualPlaceholder.innerHTML = `<img src="${heroData.hero_foreground}" alt="Hero Image" style="width:100%; height:auto; max-height:450px; object-fit:contain; position:relative; z-index:2;">`;
+          heroVisualPlaceholder.style.background = 'none';
+        }
+      }
+
+      // 2. Social Media Settings
+      const settingsRes = await fetch('data/settings.json');
+      if (settingsRes.ok) {
+        const settingsData = await settingsRes.json();
+        const footerSocialsContainers = document.querySelectorAll('.footer-socials');
+        
+        if (footerSocialsContainers.length > 0) {
+          const socialHtml = settingsData.social_media.map(s => {
+            let icon = 'fa-share-alt';
+            if (s.platform === 'facebook') icon = 'fab fa-facebook-f';
+            else if (s.platform === 'instagram') icon = 'fab fa-instagram';
+            else if (s.platform === 'tiktok') icon = 'fab fa-tiktok';
+            else if (s.platform === 'whatsapp') icon = 'fab fa-whatsapp';
+            
+            return `<a href="${s.url}" target="_blank" title="${s.platform}"><i class="${icon}"></i></a>`;
+          }).join('');
+          
+          footerSocialsContainers.forEach(el => el.innerHTML = socialHtml);
+        }
+      }
+    } catch (err) {
+      console.warn('CMS data not loaded:', err);
+    }
+  };
+  loadCMSData();
+
 });
