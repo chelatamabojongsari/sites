@@ -1,7 +1,10 @@
-local_backend: true
 backend:
-  name: git-gateway
+  name: github
+  repo: chelatamabojongsari/sites
   branch: main
+  base_url: https://api.github.com
+
+local_backend: true
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
@@ -9,6 +12,9 @@ public_folder: "/assets/img"
 collections:
   - name: "home"
     label: "Home"
+    delete: false
+    editor:
+      preview: false
     files:
       - name: "hero"
         label: "Hero Section"
@@ -24,6 +30,7 @@ collections:
     folder: "data/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: "json"
     fields:
       - { label: "Judul", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "select", options: ["Admin", "Tim Teknis"] }
@@ -36,6 +43,7 @@ collections:
     folder: "data/products"
     create: true
     slug: "{{slug}}"
+    format: "json"
     fields:
       - { label: "Nama", name: "nama", widget: "string" }
       - { label: "Deskripsi", name: "deskripsi", widget: "text" }
